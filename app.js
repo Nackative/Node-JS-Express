@@ -14,7 +14,7 @@ app.set("views","./src/views");
 app.set("view engine", "ejs")
 app.get("/", (req, res) =>{
 
-    res.render('index', {username:'Sapphaya'});
+    res.render('index', {username:'Sapphaya',customers:["Sapphaya", "Snacknoii", "Thailand"]});
 
 }) 
 
