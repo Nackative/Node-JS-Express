@@ -8,10 +8,13 @@ const app = express();
 const PORT = process.env.PORT;
 
 app.use(morgan('combined'));
-app.use(express.static(path.join(__dirname,"/public/")));
+app.use(express.static(path.join(__dirname,"/public/")));  //เรียกใช้ file index_16.html ใน path public/src/index_16.html
+
+app.set("views","./src/views");
+app.set("view engine", "ejs")
 app.get("/", (req, res) =>{
 
-    res.send('Hi NS Family Company 2022');
+    res.render('index', {username:'Sapphaya'});
 
 }) 
 
